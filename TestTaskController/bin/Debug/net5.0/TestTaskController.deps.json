@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "TestTaskController/1.0.0": {
+        "dependencies": {
+          "TestTaskModel": "1.0.0"
+        },
+        "runtime": {
+          "TestTaskController.dll": {}
+        }
+      },
+      "TestTaskModel/1.0.0": {
+        "runtime": {
+          "TestTaskModel.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TestTaskController/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TestTaskModel/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

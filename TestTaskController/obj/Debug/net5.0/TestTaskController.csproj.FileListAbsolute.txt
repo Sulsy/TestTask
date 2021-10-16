@@ -1,0 +1,14 @@
+C:\Users\Ent\source\repos\TestTask\TestTaskController\bin\Debug\net5.0\TestTaskController.deps.json
+C:\Users\Ent\source\repos\TestTask\TestTaskController\bin\Debug\net5.0\TestTaskController.dll
+C:\Users\Ent\source\repos\TestTask\TestTaskController\bin\Debug\net5.0\ref\TestTaskController.dll
+C:\Users\Ent\source\repos\TestTask\TestTaskController\bin\Debug\net5.0\TestTaskController.pdb
+C:\Users\Ent\source\repos\TestTask\TestTaskController\obj\Debug\net5.0\TestTaskController.csproj.AssemblyReference.cache
+C:\Users\Ent\source\repos\TestTask\TestTaskController\obj\Debug\net5.0\TestTaskController.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ent\source\repos\TestTask\TestTaskController\obj\Debug\net5.0\TestTaskController.AssemblyInfoInputs.cache
+C:\Users\Ent\source\repos\TestTask\TestTaskController\obj\Debug\net5.0\TestTaskController.AssemblyInfo.cs
+C:\Users\Ent\source\repos\TestTask\TestTaskController\obj\Debug\net5.0\TestTaskController.csproj.CoreCompileInputs.cache
+C:\Users\Ent\source\repos\TestTask\TestTaskController\obj\Debug\net5.0\TestTaskController.dll
+C:\Users\Ent\source\repos\TestTask\TestTaskController\obj\Debug\net5.0\ref\TestTaskController.dll
+C:\Users\Ent\source\repos\TestTask\TestTaskController\obj\Debug\net5.0\TestTaskController.pdb
+C:\Users\Ent\source\repos\TestTask\TestTaskController\bin\Debug\net5.0\TestTaskModel.dll
+C:\Users\Ent\source\repos\TestTask\TestTaskController\bin\Debug\net5.0\TestTaskModel.pdb
