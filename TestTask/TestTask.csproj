@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TestTaskView\UI.csproj" />
+    <ProjectReference Include="..\TestTaskView\TestTaskUI.csproj" />
   </ItemGroup>
 
 </Project>

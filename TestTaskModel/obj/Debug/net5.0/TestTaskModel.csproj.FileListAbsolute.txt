@@ -10,3 +10,15 @@ C:\Users\Ent\source\repos\TestTask\TestTaskModel\obj\Debug\net5.0\TestTaskModel.
 C:\Users\Ent\source\repos\TestTask\TestTaskModel\obj\Debug\net5.0\TestTaskModel.dll
 C:\Users\Ent\source\repos\TestTask\TestTaskModel\obj\Debug\net5.0\ref\TestTaskModel.dll
 C:\Users\Ent\source\repos\TestTask\TestTaskModel\obj\Debug\net5.0\TestTaskModel.pdb
+E:\Task\TestTask\TestTaskModel\bin\Debug\net5.0\TestTaskModel.deps.json
+E:\Task\TestTask\TestTaskModel\bin\Debug\net5.0\TestTaskModel.dll
+E:\Task\TestTask\TestTaskModel\bin\Debug\net5.0\ref\TestTaskModel.dll
+E:\Task\TestTask\TestTaskModel\bin\Debug\net5.0\TestTaskModel.pdb
+E:\Task\TestTask\TestTaskModel\obj\Debug\net5.0\TestTaskModel.GeneratedMSBuildEditorConfig.editorconfig
+E:\Task\TestTask\TestTaskModel\obj\Debug\net5.0\TestTaskModel.AssemblyInfoInputs.cache
+E:\Task\TestTask\TestTaskModel\obj\Debug\net5.0\TestTaskModel.AssemblyInfo.cs
+E:\Task\TestTask\TestTaskModel\obj\Debug\net5.0\TestTaskModel.csproj.CoreCompileInputs.cache
+E:\Task\TestTask\TestTaskModel\obj\Debug\net5.0\TestTaskModel.dll
+E:\Task\TestTask\TestTaskModel\obj\Debug\net5.0\ref\TestTaskModel.dll
+E:\Task\TestTask\TestTaskModel\obj\Debug\net5.0\TestTaskModel.pdb
+E:\Task\TestTask\TestTaskModel\obj\Debug\net5.0\TestTaskModel.csproj.AssemblyReference.cache

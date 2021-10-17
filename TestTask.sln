@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestTask", "TestTask\TestTa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestTaskModel", "TestTaskModel\TestTaskModel.csproj", "{2C9B46B0-CE15-4D35-8ADA-692297B82393}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI", "TestTaskView\UI.csproj", "{F71CDCD9-942C-4BE5-89CA-BBCBBFF8EBA1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestTaskUI", "TestTaskView\TestTaskUI.csproj", "{F71CDCD9-942C-4BE5-89CA-BBCBBFF8EBA1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -53,11 +53,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ent\\source\\repos\\TestTask\\TestTaskModel\\TestTaskModel.csproj",
+      "projectUniqueName": "E:\\Task\\TestTask\\TestTaskModel\\TestTaskModel.csproj",
       "projectName": "TestTaskModel",
-      "projectPath": "C:\\Users\\Ent\\source\\repos\\TestTask\\TestTaskModel\\TestTaskModel.csproj",
+      "projectPath": "E:\\Task\\TestTask\\TestTaskModel\\TestTaskModel.csproj",
       "packagesPath": "C:\\Users\\Ent\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ent\\source\\repos\\TestTask\\TestTaskModel\\obj\\",
+      "outputPath": "E:\\Task\\TestTask\\TestTaskModel\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Ent\\AppData\\Roaming\\NuGet\\NuGet.Config",

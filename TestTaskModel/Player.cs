@@ -1,17 +1,16 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
+using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Text.Json;
-using System.Threading.Tasks;
+using System.Net.Mime;
 using JsonSerializer = Newtonsoft.Json.JsonSerializer;
 
 namespace TestTaskModel
 {
-    public class Player 
+    public class Player
     {
+        public static string PATH = AppDomain.CurrentDomain.BaseDirectory+"\\Save.Json";
         public static Player instance;
         public string NamePlayer { get; set; }
         public int Progress { get;  set; }
@@ -39,12 +38,10 @@ namespace TestTaskModel
         {
             return _deckPlayer.Find(x => x.DeckName == deck);
         }
-
         public void ProgressPlayer(int progress)
         {
             this.Progress = progress;
         }
-
         public List<Deck> ShowDeck(int count = 0)
         {
             var showDeck = new List<Deck>();
@@ -70,23 +67,9 @@ namespace TestTaskModel
 
             return showDeck;
         }
-        public Deck ShowDeck(string nameDeck)
-        {
-
-            foreach (var deck in _deckPlayer)
-            {
-                if (nameDeck==deck.DeckName)
-                {
-                    return deck;
-                }
-
-            }
-
-            return null;
-        }
         public static void SaveData()
         {
-            using (StreamWriter file = File.CreateText(@"E:\path.txt"))
+            using (StreamWriter file = File.CreateText(PATH))
             {
                 JsonSerializer serializer = new JsonSerializer();
                 serializer.Serialize(file, instance);
@@ -94,7 +77,7 @@ namespace TestTaskModel
         }
         public static Player LoadData()
         {
-            using (StreamReader file = File.OpenText(@"E:\path.txt"))
+            using (StreamReader file = File.OpenText(PATH))
             {
                 JsonSerializer serializer = new JsonSerializer();
                 JsonReader r = new JsonTextReader(file);

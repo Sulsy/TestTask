@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading;
 using TestTaskModel;
 using UI.View;
 
@@ -20,38 +22,40 @@ namespace UI
     {
         public static void SelectOperation()
         {
-            Player player = new Player("Oleg");
+            Player player = Player.LoadData();
             Player.instance = player;
+            Deck deck;
+
             while (true)
             {
-                Console.WriteLine("Введите:" +
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("\nВведите:" +
                                   "\n1 если хотите просмотреть все существующие колоды," +
-                                  "\n2 если хотите просмотреть конкретную колоду " +
+                                  "\n2 если хотите просмотреть колоду " +
                                   "\n3 если хотите создать колоду\n");
                 switch (Convert.ToInt32(Console.ReadLine()))
                 {
                     case (int)Input.SeeAll:
-                        player.ShowDeck();
+
+                        Console.ForegroundColor = ConsoleColor.DarkYellow;
+                        ShowDecks(player);
+
                         break;
                     case (int)Input.Find:
-                        var deckInput = DeckView.DeckInput();
-                        var deck = player.GetDeck(deckInput);
-                        DeckView.DeckOutput(deck);
-                        OpenDeck(deck);
+                        deck =GetDeck(player);
+                        var kopeck = DeckView.DeckOperation();
+                        OpenDeck(deck, kopeck == 1 ? CardView.CountCardRandom() : deck._deckCard.Count);
                         break;
                     case (int)Input.Create:
                         CreateDeck();
                         break;
                     default:
-                        player= Player.LoadData();
-                        Player.instance = player;
                         break;
                 }
                 Player.SaveData();
             }
 
         }
-
         public static HashSet<int> RandomCard(int count,int deckCount)
         {
             HashSet<int> numbers=new HashSet<int>();
@@ -71,13 +75,14 @@ namespace UI
         {
             deck.SetCard(number, frontText, backText);
         }
-        public static Deck GetDeck(Player player, string name)
+        public static Deck GetDeck(Player player)
         {
-            return player.GetDeck(name);
+            return player.GetDeck(DeckView.DeckInput());
         }
-        public static Card GetCard(Deck deck, int number)
+        public static void ShowDecks(Player player)
         {
-            return deck.GetCard(number);
+            List<Deck> allDecks =player.ShowDeck();
+            foreach (var _deck in allDecks) { DeckView.DeckOutput(_deck); }
         }
         public static void CreateCard(Deck deck)
         {
@@ -98,15 +103,32 @@ namespace UI
 
 
         }
-
-        public static void OpenDeck(Deck deck)
+        public static void OpenDeck(Deck deck, int count)
         {
-            Console.Clear();
-            for (int i = 0; i < deck._deckCard.Count; i++)
+            HashSet<int> numbers=null;
+            bool rand = false, randD = false;
+            var deckCardCount = deck._deckCard.Count;
+            if (count!= deckCardCount)
             {
+                rand = true;
+                numbers = RandomCard(count, deckCardCount);
+            }
+            foreach (var card in deck._deckCard)
+            {
+                if (rand)
+                {
+                    foreach (var randCard in numbers.Where(randCard => card.NumberInDeck == randCard))
+                    {
+                        randD = true;
+                    }
 
-                var card = deck._deckCard[i];
-                var cardL =card.Learned==true ? 0 : CardView.CardOutput(card);
+                    if (randD)
+                    {
+                        randD = false;
+                        continue;
+                    }
+                }
+                var cardL = card.Learned || card.OpenBackText ? 0 : CardView.CardOutput(card);
                 switch (cardL)
                 {
                     case 1:
@@ -115,16 +137,14 @@ namespace UI
                         break;
                     case 2:
                         Console.Clear();
-                        card.IsCardLearned();
+                        card.IsCardOpen();
                         CardView.CardOutput(card);
-                        break;
-                    case 3:
-                        return;
+                        card.IsCardClose();
+                        break; ;
                     default:
                         continue;
                 }
             }
-            
         }
     }
 }

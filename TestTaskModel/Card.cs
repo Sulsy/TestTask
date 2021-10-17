@@ -8,19 +8,18 @@ namespace TestTaskModel
         public string FrontText { get;private set; }
         public string BackText { get; private set; }
         public bool Learned { get; set; }
-
-        public readonly int NumberInDeck;
-
+        public bool OpenBackText { get; set; }
+        public int NumberInDeck;
         public Card(int number, string frontText, string backText)
         {
             this.NumberInDeck = number;
             this.FrontText = frontText;
             this.BackText = backText;
-
         }
-
         public void IsCardLearned() { this.Learned = true; }
-        
+        public void IsCardOpen() { this.OpenBackText = true; }
+        public void IsCardClose() { this.OpenBackText = false; }
+
         public string OpenFrontCard()
         {
             return "My FrontText is " + FrontText.ToString()+"\n";

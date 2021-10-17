@@ -13,3 +13,17 @@ C:\Users\Ent\source\repos\TestTask\TestTaskView\obj\Debug\net5.0\UI.dll
 C:\Users\Ent\source\repos\TestTask\TestTaskView\obj\Debug\net5.0\ref\UI.dll
 C:\Users\Ent\source\repos\TestTask\TestTaskView\obj\Debug\net5.0\UI.pdb
 C:\Users\Ent\source\repos\TestTask\TestTaskView\obj\Debug\net5.0\UI.csproj.CopyComplete
+E:\Task\TestTask\TestTaskView\bin\Debug\net5.0\UI.deps.json
+E:\Task\TestTask\TestTaskView\bin\Debug\net5.0\UI.dll
+E:\Task\TestTask\TestTaskView\bin\Debug\net5.0\ref\UI.dll
+E:\Task\TestTask\TestTaskView\bin\Debug\net5.0\UI.pdb
+E:\Task\TestTask\TestTaskView\bin\Debug\net5.0\TestTaskModel.dll
+E:\Task\TestTask\TestTaskView\bin\Debug\net5.0\TestTaskModel.pdb
+E:\Task\TestTask\TestTaskView\obj\Debug\net5.0\UI.csproj.AssemblyReference.cache
+E:\Task\TestTask\TestTaskView\obj\Debug\net5.0\UI.GeneratedMSBuildEditorConfig.editorconfig
+E:\Task\TestTask\TestTaskView\obj\Debug\net5.0\UI.AssemblyInfoInputs.cache
+E:\Task\TestTask\TestTaskView\obj\Debug\net5.0\UI.AssemblyInfo.cs
+E:\Task\TestTask\TestTaskView\obj\Debug\net5.0\UI.csproj.CoreCompileInputs.cache
+E:\Task\TestTask\TestTaskView\obj\Debug\net5.0\UI.dll
+E:\Task\TestTask\TestTaskView\obj\Debug\net5.0\ref\UI.dll
+E:\Task\TestTask\TestTaskView\obj\Debug\net5.0\UI.pdb

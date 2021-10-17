@@ -86,7 +86,7 @@ namespace TestTaskModel
         }
         public override string ToString()
         {
-            return "My name is " + DeckName.ToString();
+            return "Deck name is " + DeckName.ToString();
         }
     }
 
