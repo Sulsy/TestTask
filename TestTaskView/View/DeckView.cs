@@ -1,32 +1,55 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TestTaskModel;
 
-namespace UI.View
+namespace TestTaskUI.View
 {
-    public static class DeckView
+    /// <summary>
+    /// Deck Interaction
+    /// </summary>
+    public class DeckView 
     {
-        public static string DeckInput()
+        /// <summary>
+        /// Deck name Input
+        /// </summary>
+        /// <returns>Name Deck</returns>
+        public static string Input()
         {
             Console.ForegroundColor = ConsoleColor.DarkBlue;
-            Console.WriteLine("Введите название колоды\n");
+            Console.WriteLine("Enter the name of the deck\n");
             return Console.ReadLine();
         }
-        public static int DeckOperation()
+        /// <summary>
+        /// Deck all operation
+        /// </summary>
+        /// <returns>Player input</returns>
+        public static int Operation()
         {
-            Console.ForegroundColor = ConsoleColor.DarkBlue;
-            Console.WriteLine("Введите:\n" +
-                              "1 чтобы посмотреть N случайных карт\n"+
-                              "2 чтобы получить информацию о конкретной карте\n");
-            return Convert.ToInt32(Console.ReadLine());
+
+            while (true)
+            {
+                try
+                {
+                    Console.ForegroundColor = ConsoleColor.DarkBlue;
+                    Console.WriteLine("Enter:\n" +
+                                      "1 to see N random cards available\n" +
+                                      "2 to see all available maps\n" +
+                                      "3 to add a card\n");
+                    return Convert.ToInt32(Console.ReadLine());
+                }
+                catch (Exception)
+                {
+                    continue;
+                }
+            }
+            
         }
-        public static void DeckOutput(Deck deck)
+        /// <summary>
+        /// Output name Deck
+        /// </summary>
+        /// <param name="deck">Selected deck</param>
+        public static void Output(Deck deck)
         {
             Console.WriteLine(deck);
-
         }
     }
 }

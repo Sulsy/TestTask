@@ -1,56 +1,91 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using TestTaskModel;
 
-namespace UI.View
+namespace TestTaskUI.View
 {
-
+    /// <summary>
+    /// Card Interaction
+    /// </summary>
+    /// <returns>Name Card</returns>
     public static class CardView
     {
+        /// <summary>
+        /// First element is create?
+        /// </summary>
+        public static bool FirstElement;
+        /// <summary>
+        /// Is card Read?
+        /// </summary>
         private static bool? _isRead;
+        /// <summary>
+        /// Input Player
+        /// </summary>
         private static int _inputMenu;
-        private static readonly int _sleep = 1000;
-        private static readonly int _timeForRead=3;
-
-        public static string[] CardInput()
+        /// <summary>
+        /// Waiting for user input 
+        /// </summary>
+        private const int Sleep = 1000;
+        /// <summary>
+        /// Waiting for user input(Count for)
+        /// </summary>
+        private const int TimeForRead = 15;
+        /// <summary>
+        /// Card name Input
+        /// </summary>
+        /// <returns>Name Card</returns>
+        public static string[] Input()
         {
             Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.WriteLine("Введите слово на иностанном языке\n"); 
+            Console.WriteLine("Enter a word in a foreign language\n"); 
             var a = Console.ReadLine();
             Console.ForegroundColor = ConsoleColor.Blue;
-            Console.WriteLine("Введите перевод\n");
+            Console.WriteLine("Enter translation\n");
             var b = Console.ReadLine();
             string[] card = new[] {a, b};
             return card;
         }
+        /// <summary>
+        /// Input Count Card
+        /// </summary>
+        /// <returns>Input count Card create</returns>
         public static int CardCount()
         {
             Console.ForegroundColor = ConsoleColor.DarkYellow;
-            Console.WriteLine("Сколько карточек вы хотите добавить?\n");
+            Console.WriteLine("How many cards do you want to add?\n");
             return (Convert.ToInt32(Console.ReadLine()));
         }
-        public static int CardOutput(Card card)
+        /// <summary>
+        /// Card name Output
+        /// </summary>
+        /// <param name="card"></param>
+        /// <returns></returns>
+        public static int Output(Card card)
         {
-            Console.Clear();
             if (card.OpenBackText  &&!card.Learned)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("\n"+card.OpenBackCard());
-                Console.ResetColor();
                 return 2;
             }
+
+            if (FirstElement)
+            {
+                Console.WriteLine("Next");
+                Console.ReadLine();
+                Console.Clear();
+               
+            }
+
+            FirstElement = true;
             Console.ForegroundColor = ConsoleColor.DarkYellow;
             _inputMenu = 2;
             Console.WriteLine("\n" + card.OpenFrontCard());
-            Thread th = new Thread(WaitingForEntry);
+            var th = new Thread(WaitingForEntry);
             th.Start();
-            for (int i = 0; i < _timeForRead; i++)
+            for (int i = 0; i < TimeForRead; i++)
             {
-                Thread.Sleep(_sleep);
+                Thread.Sleep(Sleep);
                 if (_isRead != false) continue;
                 Console.Clear();
                 return (_inputMenu);
@@ -59,22 +94,28 @@ namespace UI.View
             Console.Clear();
             return (_inputMenu);
         }
-        public static void WaitingForEntry() 
+        /// <summary>
+        /// Waiting input
+        /// </summary>
+        private static void WaitingForEntry() 
         {
-            Console.WriteLine("\nВведите:" +
-                              "\n1 чтобы пометить слово как выученное" +
-                              "\n2 чтобы узнать перевод");
+            Console.WriteLine("\nEnter :" +
+                              "\n1 to mark a word as learned" +
+                              "\n2 to word as Open");
                               
             _isRead = true;
-            if(_isRead==true)
-                _inputMenu = Convert.ToInt32(Console.ReadLine());
+            _inputMenu = Convert.ToInt32(Console.ReadLine());
             _isRead = false;
             
         }
+        /// <summary>
+        /// Input Random Count Card
+        /// </summary>
+        /// <returns>Input count random Card create</returns>
         public static int CountCardRandom()
         {
             Console.ForegroundColor = ConsoleColor.DarkYellow;
-            Console.WriteLine("Сколько карточек вы хотите посмотреть?\n");
+            Console.WriteLine("How many cards do you want to see?\n");
             return (Convert.ToInt32(Console.ReadLine()));
         }
     }

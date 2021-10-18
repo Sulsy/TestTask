@@ -13,10 +13,10 @@ E:\Task\TestTask\TestTask\obj\Debug\net5.0\TestTask.GeneratedMSBuildEditorConfig
 E:\Task\TestTask\TestTask\obj\Debug\net5.0\TestTask.AssemblyInfoInputs.cache
 E:\Task\TestTask\TestTask\obj\Debug\net5.0\TestTask.AssemblyInfo.cs
 E:\Task\TestTask\TestTask\obj\Debug\net5.0\TestTask.csproj.CoreCompileInputs.cache
-E:\Task\TestTask\TestTask\obj\Debug\net5.0\TestTask.csproj.CopyComplete
 E:\Task\TestTask\TestTask\obj\Debug\net5.0\TestTask.dll
 E:\Task\TestTask\TestTask\obj\Debug\net5.0\ref\TestTask.dll
 E:\Task\TestTask\TestTask\obj\Debug\net5.0\TestTask.pdb
 E:\Task\TestTask\TestTask\obj\Debug\net5.0\TestTask.genruntimeconfig.cache
 E:\Task\TestTask\TestTask\bin\Debug\net5.0\TestTaskUI.dll
 E:\Task\TestTask\TestTask\bin\Debug\net5.0\TestTaskUI.pdb
+E:\Task\TestTask\TestTask\obj\Debug\net5.0\TestTask.csproj.CopyComplete

@@ -1,0 +1,14 @@
+E:\Task\TestTask\TestTaskView\bin\Debug\net5.0\TestTaskUI.deps.json
+E:\Task\TestTask\TestTaskView\bin\Debug\net5.0\TestTaskUI.dll
+E:\Task\TestTask\TestTaskView\bin\Debug\net5.0\ref\TestTaskUI.dll
+E:\Task\TestTask\TestTaskView\bin\Debug\net5.0\TestTaskUI.pdb
+E:\Task\TestTask\TestTaskView\bin\Debug\net5.0\TestTaskModel.dll
+E:\Task\TestTask\TestTaskView\bin\Debug\net5.0\TestTaskModel.pdb
+E:\Task\TestTask\TestTaskView\obj\Debug\net5.0\TestTaskUI.csproj.AssemblyReference.cache
+E:\Task\TestTask\TestTaskView\obj\Debug\net5.0\TestTaskUI.GeneratedMSBuildEditorConfig.editorconfig
+E:\Task\TestTask\TestTaskView\obj\Debug\net5.0\TestTaskUI.AssemblyInfoInputs.cache
+E:\Task\TestTask\TestTaskView\obj\Debug\net5.0\TestTaskUI.AssemblyInfo.cs
+E:\Task\TestTask\TestTaskView\obj\Debug\net5.0\TestTaskUI.csproj.CoreCompileInputs.cache
+E:\Task\TestTask\TestTaskView\obj\Debug\net5.0\TestTaskUI.dll
+E:\Task\TestTask\TestTaskView\obj\Debug\net5.0\ref\TestTaskUI.dll
+E:\Task\TestTask\TestTaskView\obj\Debug\net5.0\TestTaskUI.pdb

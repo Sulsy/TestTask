@@ -6,84 +6,48 @@ namespace TestTaskModel
 {
     public class Deck 
     {
-        public static readonly Dictionary<string, Deck> instances =
-            new Dictionary<string, Deck>();
-
-        public readonly List<Card> _deckCard = new List<Card>();
+        /// <summary>
+        /// List Card
+        /// </summary>
+        public readonly List<Card> DeckCard = new();
+        /// <summary>
+        /// Deck name
+        /// </summary>
         public string DeckName { get;  set; }
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="deckName">Deck name</param>
         public Deck(string deckName)
         {
             this.DeckName = deckName;
         }
-
-
+        /// <summary>
+        /// Marks the card as Learned
+        /// </summary>
+        /// <param name="number">Number Card</param>
         public void IsCardLearned(int number)
         {
-            var card = _deckCard.Find(x => x.NumberInDeck == number && !x.Learned);
-            card.IsCardLearned();
-            //NextCard(number);
+            var card = DeckCard.Find(x => x.NumberInDeck == number && !x.Learned);
+            card?.IsCardLearned();
         }
-        public Card NextCard(int number)
+        /// <summary>
+        /// Create Card FOr Deck
+        /// </summary>
+        /// <param name="number">Number Card</param>
+        /// <param name="frontText">Front Text Card</param>
+        /// <param name="backText">Back Text Card</param>
+        public void SetCard(int number,string frontText,string backText)
         {
-            return _deckCard.Find(x => x.NumberInDeck == number + 1 && !x.Learned);
-        }
-        public void SetCard(Card card)
-        {
-            if (_deckCard.All(x=>x!=card))
+            if (DeckCard.All(x => x.FrontText != frontText && x.BackText != backText  && x.NumberInDeck !=number))
             {
-                _deckCard.Add(card);
+                DeckCard.Add(new Card(number,frontText,backText));
             }
         }
-        public void SetCard(int number,string FrontText,string BackText)
-        {
-            if (_deckCard.All(x => x.FrontText != FrontText && x.BackText != BackText  && x.NumberInDeck !=number))
-            {
-                _deckCard.Add(new Card(number,FrontText,BackText));
-            }
-        }
-        public Card GetCard(int number)
-        {
-            return _deckCard.Find(x => x.NumberInDeck == number);
-        }
-        public Card GetCard(string frontText)
-        {
-            return _deckCard.Find(x => x.FrontText == frontText);
-        }
-        public List<Card> ShowCards(int count = 0)
-        {
-            var showCards = new List<Card>();
-
-            foreach (var card in _deckCard)
-            {
-                if (count != 0)
-                {
-
-                    if (showCards.Count == count)
-                    {
-                        return showCards;
-                    }
-
-                    showCards.Add(card);
-                }
-                else
-                {
-                    showCards.Add(card);
-                }
-
-            }
-
-            return showCards;
-        }
-
-        public List<Card> ShowRandomCards(HashSet<int> randomHashSet)
-        {
-            return (
-                from card in _deckCard 
-                from hashSet in randomHashSet 
-                where card.NumberInDeck == hashSet && !card.Learned 
-                select card).
-                ToList();
-        }
+        /// <summary>
+        /// Override To String For Deck
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return "Deck name is " + DeckName.ToString();
